@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jedy Cuevas | Mi Portafolio</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="hero-header" id="inicio">
+
+    <!-- Carrusel de fondo -->
+    <div class="hero-background">
+        <div id="heroTrack" class="hero-background-track">
+            <div class="hero-background-slide">
+                <img src="imagenes/foto2.jpg" alt="">
+            </div>
+            <div class="hero-background-slide">
+                <img src="imagenes/foto1.jpg" alt="">
+            </div>
+            <div class="hero-background-slide">
+                <img src="imagenes/foto3.jpg" alt="">
+            </div>
+            <div class="hero-background-slide">
+                <img src="imagenes/foto4.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-background-overlay"></div>
+
+    <div class="hero-content">
+        <p class="eyebrow">MI ESPACIO PERSONAL</p>
+        <h1>Jedy Cuevas Quispe</h1>
+        <h2>Estudiante de Ingeniería de Sistemas</h2>
+
+        <p class="hero-description">
+            Conociendo el mundo, aprendiendo y creando mi propio camino.
+        </p>
+
+        <a href="#sobre-mi" class="btn">
+            Conóceme <span>↓</span>
+        </a>
+    </div>
+
+    <div class="hero-photo">
+        <img src="imagenes/yo.jpg" alt="Fotografía de Jedy">
+    </div>
+
+    <button id="prevBtn" class="hero-arrow prev" aria-label="Foto anterior">
+        ❮
+    </button>
+
+    <button id="nextBtn" class="hero-arrow next" aria-label="Foto siguiente">
+        ❯
+    </button>
+
+    <div id="heroIndicators" class="hero-indicators"></div>
+</header>
+
+<nav class="navbar">
+    <a href="#inicio" class="logo">JC<span>.</span></a>
+
+    <button id="menuBtn" class="menu-btn" aria-label="Abrir menú"
+            aria-expanded="false">☰</button>
+
+    <div id="navMenu" class="nav-menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#gustos">Mis gustos</a>
+        <a href="#rutina">Mi día a día</a>
+        <a href="#fotografia">Fotografía</a>
+        <a href="#metas">Mis metas</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+
+    <button id="themeBtn" class="theme-btn" aria-label="Cambiar tema">
+        ☀️
+    </button>
+</nav>
+
+<main>
+
+    <section id="inicio" class="intro section">
+        <div>
+            <p class="eyebrow">HOLA, ¡QUÉ GUSTO!</p>
+            <h2>¡Hola! Soy Jedy <span>💜</span></h2>
+            <p>
+                Soy una chica alegre, carismática y curiosa.
+                Me gusta aprender cosas nuevas, conocer el mundo
+                y descubrir cómo funcionan las cosas.
+            </p>
+            <a href="#sobre-mi" class="text-link">Descubre más sobre mí →</a>
+        </div>
+        <div class="intro-decoration">JC</div>
+    </section>
+
+    <section id="sobre-mi" class="section">
+        <div class="section-heading">
+            <p class="eyebrow">UN POCO DE MI HISTORIA</p>
+            <h2>Sobre mí</h2>
+        </div>
+
+        <div class="card about-card">
+            <p>
+                Estudio Ingeniería de Sistemas y actualmente estoy
+                cursando el sexto semestre.
+            </p>
+            <p>
+                Me considero una persona sociable, alegre y un poco
+                enojona. Me gusta escuchar a las personas y darles
+                consejos cuando puedo.
+            </p>
+            <p>
+                Soy curiosa y me gusta investigar y comprender lo que
+                no entiendo, especialmente las cosas que suceden
+                en el mundo real.
+            </p>
+        </div>
+    </section>
+
+    <section id="gustos" class="section">
+        <div class="section-heading">
+            <p class="eyebrow">COSAS QUE ME ENCANTAN</p>
+            <h2>Mis gustos y favoritos</h2>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-categoria="todos">Todos</button>
+            <button class="filter-btn" data-categoria="musica">Música</button>
+            <button class="filter-btn" data-categoria="peliculas">Películas</button>
+            <button class="filter-btn" data-categoria="series">Series</button>
+            <button class="filter-btn" data-categoria="comida">Comida</button>
+        </div>
+
+        <div class="grid">
+            <article class="card favorito" data-categoria="musica">
+                <span class="card-icon">♫</span>
+                <h3>Música</h3>
+                <p>
+                    Escucho de todo, desde rock pesado hasta música
+                    folklórica. Me gustan Bad Bunny, Daddy Yankee,
+                    Wisin y Yandel, Adele, Michael Jackson y Los Kjarkas.
+                </p>
+            </article>
+
+            <article class="card favorito" data-categoria="peliculas">
+                <span class="card-icon">✦</span>
+                <h3>Películas</h3>
+                <p>
+                    Mi superhéroe favorito es Spider-Man.
+                    También me gustan las películas de Marvel
+                    y "A dos metros de ti".
+                </p>
+            </article>
+
+            <article class="card favorito" data-categoria="series">
+                <span class="card-icon">▣</span>
+                <h3>Series</h3>
+                <p>
+                    Me gustan Stranger Things, La casa de papel
+                    y los dramas coreanos, especialmente
+                    "Propuesta laboral".
+                </p>
+            </article>
+
+            <article class="card favorito" data-categoria="comida">
+                <span class="card-icon">♡</span>
+                <h3>Comida</h3>
+                <p>Mis platos favoritos son la sopa de maní y las milanesas.</p>
+            </article>
+
+            <article class="card favorito" data-categoria="comida">
+                <span class="card-icon">☕</span>
+                <h3>Bebidas</h3>
+                <p>Me gusta la Coca-Cola y el Del Valle Cherry.</p>
+            </article>
+
+            <article class="card favorito" data-categoria="todos">
+                <span class="card-icon">✧</span>
+                <h3>Colores</h3>
+                <p>Mis colores favoritos son el negro, morado, azul y rojo.</p>
+            </article>
+        </div>
+    </section>
+<section id="rutina" class="section routine-section">
+
+    <div class="section-heading">
+        <p class="eyebrow">ORGANIZACIÓN PERSONAL</p>
+        <h2>Mi día a día <span>♡</span></h2>
+        <p>Una rutina organizada para aprender, crecer y alcanzar mis objetivos.</p>
+    </div>
+
+    <div class="routine-summary">
+
+        <div class="routine-summary-card">
+            <div class="routine-icon sun-icon">☀️</div>
+            <div>
+                <span>Comienzo del día</span>
+                <h3>07:00 AM</h3>
+                <p>Me levanto con energía ♡</p>
+            </div>
+        </div>
+
+        <div class="routine-summary-card">
+            <div class="routine-icon study-icon">🎓</div>
+            <div>
+                <span>Clases</span>
+                <h3>08:45 AM – 11:45 AM</h3>
+                <p>Estudio en la universidad ♡</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="routine-timeline">
+
+        <article class="routine-item">
+            <div class="routine-time">07:00 AM</div>
+            <div class="routine-dot"></div>
+            <div class="routine-card">
+                <span class="routine-card-icon">🛏️</span>
+                <h3>Levantarme</h3>
+                <p>Empiezo el día con energía.</p>
+                <span class="routine-tag">Mañana</span>
+            </div>
+        </article>
+
+        <article class="routine-item">
+            <div class="routine-time">08:45 AM</div>
+            <div class="routine-dot"></div>
+            <div class="routine-card">
+                <span class="routine-card-icon">🎓</span>
+                <h3>Clases</h3>
+                <p>Aprendo y doy lo mejor de mí.</p>
+                <span class="routine-tag">Hasta las 11:45 AM</span>
+            </div>
+        </article>
+
+        <article class="routine-item">
+            <div class="routine-time">12:00 PM</div>
+            <div class="routine-dot"></div>
+            <div class="routine-card">
+                <span class="routine-card-icon">🍽️</span>
+                <h3>Descanso y almuerzo</h3>
+                <p>Almuerzo y tengo un momento para descansar.</p>
+                <span class="routine-tag">Descanso</span>
+            </div>
+        </article>
+
+        <article class="routine-item">
+            <div class="routine-time">02:00 PM</div>
+            <div class="routine-dot"></div>
+            <div class="routine-card">
+                <span class="routine-card-icon">💼</span>
+                <h3>Trabajo</h3>
+                <p>Me concentro en mis responsabilidades.</p>
+                <span class="routine-tag">Hasta las 08:00 PM</span>
+            </div>
+        </article>
+
+        <article class="routine-item">
+            <div class="routine-time">08:00 PM</div>
+            <div class="routine-dot"></div>
+            <div class="routine-card">
+                <span class="routine-card-icon">🏡</span>
+                <h3>Tiempo libre</h3>
+                <p>Disfruto de mi tiempo con mi familia, series, redes y descanso.</p>
+                <span class="routine-tag">Tiempo para mí</span>
+            </div>
+        </article>
+
+    </div>
+
+    <div class="routine-footer">
+        ✨ Organizar mi día me acerca a mis sueños ✨
+    </div>
+
+</section>
+    <section id="fotografia" class="section">
+        <div class="section-heading">
+            <p class="eyebrow">MIRANDO EL MUNDO A MI MANERA</p>
+            <h2>Mi pasión por la fotografía 📸</h2>
+            <p>Momentos, paisajes y pequeños detalles que me hacen feliz.</p>
+        </div>
+
+       <section id="fotografia" class="section">
+    <div class="section-heading">
+        <p class="eyebrow">MIS RECUERDOS</p>
+        <h2>Algunas de mis fotografías 📸</h2>
+    </div>
+
+    <div class="galeria">
+        <img src="imagenes/foto2.jpg" alt="Fotografía 2">
+        <img src="imagenes/foto3.jpg" alt="Fotografía 3">
+        <img src="imagenes/foto4.jpg" alt="Fotografía 4">
+    </div>
+</section>
+
+            <button id="nextBtn" class="flecha" aria-label="Foto siguiente">❯</button>
+        </div>
+
+        <div id="indicadores" class="indicadores"></div>
+    </section>
+
+    <section id="habilidades" class="section">
+        <div class="section-heading">
+            <p class="eyebrow">LO QUE HE APRENDIDO</p>
+            <h2>Mis habilidades</h2>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <span class="card-icon">⌨️</span>
+                <h3>Universidad</h3>
+                <p>He aprendido programación, conocimientos de sistemas y a trabajar con otras personas.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">♡</span>
+                <h3>Vida cotidiana</h3>
+                <p>Sé cocinar y lavar ropa rápidamente. Actualmente estoy aprendiendo a manejar un auto.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">✿</span>
+                <h3>Campo</h3>
+                <p>Tengo experiencia en la cosecha de verduras y conozco el trabajo del campo.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">✦</span>
+                <h3>Deportes</h3>
+                <p>Me gusta jugar wally y compartir momentos con otras personas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="metas" class="section">
+        <div class="section-heading">
+            <p class="eyebrow">MI FUTURO</p>
+            <h2>Mis metas y sueños</h2>
+        </div>
+
+        <div class="card goals-card">
+            <ul>
+                <li>Terminar mi carrera universitaria.</li>
+                <li>Trabajar en el área de Ingeniería de Sistemas.</li>
+                <li>Seguir aprendiendo y adquirir experiencia.</li>
+                <li>Viajar a España para estudiar una maestría.</li>
+                <li>Conocer diferentes lugares del mundo.</li>
+                <li>Comprar mi propia moto y mi casa.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contacto" class="section contact-section">
+        <div class="section-heading">
+            <p class="eyebrow">¡HABLEMOS!</p>
+            <h2>Déjame un mensaje</h2>
+            <p>Si quieres saludarme o conversar, puedes escribirme.</p>
+        </div>
+
+        <form id="contactForm" class="card contact-form">
+            <label for="nombre">Tu nombre</label>
+            <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+
+            <label for="mensaje">Tu mensaje</label>
+            <textarea id="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+
+            <button type="submit" class="btn">Enviar por WhatsApp ↗️</button>
+            <div id="alerta" role="status"></div>
+        </form>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <h2>Jedy<span>.</span></h2>
+    <p>Gracias por visitar mi espacio personal 💜</p>
+
+    <div class="social-links">
+        <!-- Reemplaza los enlaces de ejemplo con tus perfiles -->
+        <a href="https://wa.me/59171992464" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.tiktok.com/@jhedy048" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/cuevasjhedy/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+
+    <p class="copyright">© 2026 Jedy Cuevas Quispe | Hecho con HTML, CSS y JavaScript</p>
+</footer>
+
+</body>
+</html>
